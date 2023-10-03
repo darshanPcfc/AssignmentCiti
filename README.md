@@ -42,3 +42,10 @@ collaborate (see also: git help workflows)
 concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
+
+
+################################## JAVA CONSOLE APPLICATION ################################################
+-Console java application for bank.
+-Using simple hashmap to store data.
+-Utility class to have a common project utility methods and variables.
+-SingleTon Data store as its object is created via multiple places and multiple times.
