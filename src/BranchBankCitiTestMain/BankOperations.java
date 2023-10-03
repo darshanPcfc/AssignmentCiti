@@ -31,18 +31,22 @@ public class BankOperations {
 					//open account
 					BankOpenAccount bankOpenAccount = new BankOpenAccount();
 					bankOpenAccount.openBankAccount(UtilityConstants.stringToInt(splitStr[1]));
+					bankOpenAccount = null;
 				} else if (operationType == UtilityConstants.accountBalance) {
 					//account balance
 					BankFetchAccountBalance bankFetchAccountBalance = new BankFetchAccountBalance();
 					bankFetchAccountBalance.checkBalance(UtilityConstants.stringToInt(splitStr[1]));
+					bankFetchAccountBalance = null;
 				} else if (operationType == UtilityConstants.closeAccount) {
 					//close account
 					BankCloseAccount bankCloseAccount = new BankCloseAccount();
 					bankCloseAccount.closeAccount(UtilityConstants.stringToInt(splitStr[1]));
+					bankCloseAccount = null;
 				} else if (operationType == UtilityConstants.allAccounts) {
 					//display all accounts
 					BankAllAccountsBalance  bankAllAccountsBalance = new BankAllAccountsBalance();
 					bankAllAccountsBalance.getAllAccounts();
+					bankAllAccountsBalance = null;
 				} else if (operationType == UtilityConstants.transaction) {
 					//transfer between accounts
 					//BigDecimal amount = BigDecimal.valueOf(UtilityConstants.stringToInt(splitStr[3]));
@@ -51,6 +55,7 @@ public class BankOperations {
 					bankTransferFunds.transferFunds(UtilityConstants.stringToInt(splitStr[1]), 
 							UtilityConstants.stringToInt(splitStr[2]),
 							amount);
+					bankTransferFunds = null;
 				} else if (operationType == UtilityConstants.exit) {
 					// close scanner and exit
 					sc.close();
